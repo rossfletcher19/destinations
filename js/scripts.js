@@ -22,12 +22,23 @@ $(document).ready(function() {
     var inputtedLandmarks = $("input#landmarks").val();
     var inputtedTimeOfYear = $("input#timeOfYear").val();
     var inputtedDesNotes = $("input#desNotes").val();
-    console.log(inputtedLocName);
+    // console.log(inputtedLocName);
+
     var newDestination = new Destination(inputtedLocName, inputtedDesLoc, inputtedLandmarks, inputtedTimeOfYear, inputtedDesNotes);
 
     $("ul#destinations").append("<li><span class='destinations'>" + newDestination.displayName() + "</span></li>");
 
     // $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+
+    $(".destinations").last().click(function() {
+      $("#show-destination").show();
+      $("#show-destination h2").text(newDestination.displayName());
+      $(".location-name").text(newDestination.locName);
+      $(".destination-name").text(newDestination.desLoc);
+      $(".landmark").text(newDestination.landmarks);
+      $(".time-of-year").text(newDestination.timeOfYear);
+      $(".note").text(newDestination.desNotes);
+    });
 
 
     var inputtedLocName = $("input#newLocName").val("");
