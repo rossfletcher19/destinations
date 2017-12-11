@@ -5,9 +5,46 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Destinations</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Track all the places you've been!!</h1>
 
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add a new destination:</h2>
+          <form id="new-des">
+            <div class="form-group">
+              <label for="newLocName">Destination Name</label>
+              <input type="text" class="form-control" id="newLocName" value="The Big Island">
+            </div>
+            <div class="form-group">
+              <label for="newDesLoc">Destination Location</label>
+              <input type="text" class="form-control" id="newDesLoc" value="Hawaii, US">
+            </div>
+            <div class="form-group">
+              <label for="landmarks">Landmarks</label>
+              <input type="text" class="form-control" id="landmarks" value="Waterfalls">
+            </div>
+            <div class="form-group">
+              <label for="timeOfYear">Best Time to Visit</label>
+              <input type="month" class="form-control" id="timeOfYear" value="December 2017">
+            </div>
+            <div class="form-group">
+              <label for="desNotes">Notes on Destination</label>
+              <input type="text" class="form-control" id="desNotes" value="Don't go chasing waterfalls">
+            </div>
+
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>Destinations</h2>
+          <ul id="destinations">
+
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
